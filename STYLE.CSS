@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 80%;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    padding: 40px;
+    animation: pageLoad 0.9s ease;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #1f2933;
+    letter-spacing: 1px;
+}
+
+.header p {
+    margin-top: 10px;
+    color: #4b5563;
+    font-size: 1.1rem;
+}
+
+/* SECTIONS */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* SECTION HEADINGS */
+.section h2 {
+    font-size: 1.45rem;
+    color: #1e40af;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+/* UNDERLINE ANIMATION */
+.section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #1e40af;
+    transition: width 0.4s ease;
+}
+
+.section:hover h2::after {
+    width: 100%;
+}
+
+/* TEXT */
+.section p {
+    color: #374151;
+    line-height: 1.65;
+}
+
+/* SKILLS */
+.skills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills li {
+    padding: 8px 16px;
+    background-color: #e5e7eb;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #111827;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skills li:hover {
+    background-color: #c7d2fe;
+    transform: translateY(-2px);
+}
+
+/* PROJECTS */
+.project {
+    margin-top: 15px;
+    padding: 15px;
+    border-left: 4px solid #1e40af;
+    background-color: #f9fafb;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project h3 {
+    color: #1f2933;
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+.project p {
+    color: #374151;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.project:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* PAGE LOAD ANIMATION */
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
